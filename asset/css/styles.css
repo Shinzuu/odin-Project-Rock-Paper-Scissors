@@ -1,15 +1,70 @@
 * {
-    background-color: rgb(137, 179, 187);
-    color: rgb(26, 9, 59);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
 h1 {
     text-align: center;
-
 }
 
-button[disabled] {
-    opacity: 0.5; 
-    cursor: not-allowed; 
-  }
-  
+.content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-img {
+    display: flex;
+}
+
+.input-img img {
+    width: 200px; 
+    height: auto; 
+    margin-right: 20px; 
+    cursor: pointer;
+}
+
+.score {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.play-again-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px; /* Add some space between the button and the score */
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: all 0.3s ease; /* Add transition for hover effect */
+}
+
+.play-again-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.play-again-button:active {
+    transform: translateY(2px); /* Add slight downward shift on click */
+}
